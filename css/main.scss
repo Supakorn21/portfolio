@@ -1,0 +1,13 @@
+@use "reset";
+@use "navbar";
+@use "home";
+@use "skills";
+@use "about";
+@use "portfolio";
+@use "footer";
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+}
