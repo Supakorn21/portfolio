@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <title>Supakorn Charoen - Portfolio</title>
   </head>
   <body>
@@ -18,11 +23,24 @@
           </ul>
         </div>
         <div class="menu">
-          <ul>
-            <a href="#home"><li>Home</li></a>
-            <a href="#skills"><li>Skills</li></a>
-            <a href="#about"><li>About</li></a>
-            <a href="#portfolio"><li>Portfolio</li></a>
+          <ul class="topnav" id="myTopnav">
+            <a onclick="closeMenu()" class="menu-box" href="#home"
+              ><li>Home</li></a
+            >
+            <a onclick="closeMenu()" class="menu-box" href="#skills"
+              ><li>Skills</li></a
+            >
+            <a onclick="closeMenu()" class="menu-box" href="#about"
+              ><li>About</li></a
+            >
+            <a onclick="closeMenu()" class="menu-box" href="#portfolio"
+              ><li>Portfolio</li></a
+            >
+          </ul>
+          <ul class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+              <i class="fa fa-bars"></i>
+            </a>
           </ul>
         </div>
       </div>
