@@ -2,7 +2,7 @@
   --newOrange: #f75023;
   --textGrey: #9c9aa7;
 }
-#nav-bar {
+.nav-bar {
   width: 100%;
   position: fixed;
   top: 0px;
@@ -10,8 +10,8 @@
   right: 0px;
   z-index: 10;
   margin: 0 auto;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
 
   .nav {
     display: flex;
@@ -68,12 +68,17 @@
   }
 }
 
+.nav-active {
+  background: white;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
 @media only screen and (max-width: 1024px) {
-  #nav-bar {
+  .nav-bar {
     .nav {
       .menu {
         ul {
-          margin-right: 6rem;
+          margin-right: 2rem;
         }
       }
       .logo {
@@ -83,7 +88,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  #nav-bar {
+  .nav-bar {
     .nav {
       z-index: 1;
       .menu {
@@ -91,6 +96,7 @@
           margin-right: 2rem;
         }
         .topnav {
+          visibility: hidden;
           position: absolute;
           top: 69px;
           left: 0;
@@ -138,14 +144,17 @@
           }
         }
         .topnav.active {
+          visibility: visible;
+          display: flex;
           transform: translate(0, 0);
           height: auto;
-          display: flex;
+
+          // display: flex;
           opacity: 1;
 
           @for $i from 0 through 20 {
             a:nth-child(#{$i + 1}) {
-              transition-delay: 0.3s * $i;
+              transition-delay: 0.2s * $i;
               opacity: 1;
             }
           }
