@@ -1,5 +1,5 @@
 :root {
-  --newOrange: #aa8b56;
+  --mainColorText: #aa8b56;
   --textGrey: #9c9aa7;
   --TextFrontend: #1cbe59;
   --portfolioHover: #f4a41a;
@@ -19,7 +19,7 @@
     // position: absolute;
     // top: 30%;
     h3 {
-      color: var(--newOrange);
+      color: var(--mainColorText);
       font-size: 3rem;
       font-weight: 300;
       margin-bottom: 1rem;
@@ -42,7 +42,7 @@
         padding: 2.4rem;
         border-radius: 20px;
         border: none;
-        background: var(--newOrange);
+        background: var(--mainColorText);
         color: white;
 
         cursor: pointer;
@@ -93,7 +93,7 @@
     width: 100%;
     flex-direction: column-reverse;
     position: relative;
-    top: -4rem;
+    top: 6rem;
 
     .home__image {
       display: flex;
@@ -184,7 +184,7 @@
     flex-direction: column-reverse;
     position: relative;
     margin-left: 0;
-    top: 4rem;
+    top: 0rem;
 
     .home__image {
       display: flex;
@@ -229,6 +229,7 @@
     flex-direction: column-reverse;
     position: relative;
     margin-left: 0;
+    top: 4rem;
 
     .home__image {
       width: 85%;

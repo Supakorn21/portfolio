@@ -1,5 +1,5 @@
 :root {
-  --newOrange: #395144;
+  --mainColorText: #395144;
   --textGrey: #9c9aa7;
 }
 #about {
@@ -27,7 +27,7 @@
       font-size: 2.2rem;
       font-weight: 400;
       margin-bottom: 1rem;
-      color: var(--newOrange);
+      color: var(--mainColorText);
     }
     h1 {
       font-size: 4rem;

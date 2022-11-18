@@ -1,5 +1,5 @@
 :root {
-  --newOrange: #aa8b56;
+  --mainColorText: #aa8b56;
   --textGrey: #9c9aa7;
 }
 #skills {
@@ -7,7 +7,7 @@
   width: 100%;
   h3 {
     text-align: center;
-    color: var(--newOrange);
+    color: var(--mainColorText);
     font-weight: 600;
     margin-bottom: 1rem;
   }
