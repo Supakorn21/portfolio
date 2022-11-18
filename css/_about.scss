@@ -1,5 +1,5 @@
 :root {
-  --newOrange: #f75023;
+  --newOrange: #395144;
   --textGrey: #9c9aa7;
 }
 #about {
@@ -14,6 +14,7 @@
     img {
       width: 100%;
       height: auto;
+      border-radius: 2.5rem;
     }
   }
 
@@ -81,6 +82,7 @@
     .about__info {
       padding-right: 0;
       padding-top: 0rem;
+      padding-left: 0;
       h1 {
         font-size: 3rem;
       }
@@ -92,13 +94,42 @@
         justify-content: center;
       }
     }
+    .about__image {
+      padding-left: 0;
+    }
   }
 }
 
 @media only screen and (max-width: 425px) {
   #about {
     .about__image {
+      width: 70%;
+    }
+    .about__info {
       width: 100%;
+      h3 {
+        font-size: 2.6rem;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        text-align: center;
+        padding: 0 3rem;
+      }
+      .about__info-btn-groups {
+        .about--btn {
+          max-width: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  #about {
+    .about__image {
+      width: 60%;
     }
     .about__info {
       width: 100%;

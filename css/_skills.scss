@@ -1,5 +1,5 @@
 :root {
-  --newOrange: #f75023;
+  --newOrange: #aa8b56;
   --textGrey: #9c9aa7;
 }
 #skills {
@@ -61,7 +61,7 @@
 
 @media only screen and (max-width: 425px) {
   #skills {
-    padding-left: 7rem;
+    padding: 14rem 3rem;
 
     .skill-group {
       grid-template-columns: repeat(1, 1fr);

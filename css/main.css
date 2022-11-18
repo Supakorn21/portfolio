@@ -54,7 +54,7 @@ body {
   font-weight: 400;
   line-height: 1.6 !important;
   font-size: 1.6rem !important;
-  background-color: #f6f5f1;
+  background-color: #f6f7f2;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -64,7 +64,7 @@ code {
 }
 
 :root {
-  --newOrange: #f75023;
+  --newOrange: #aa8b56;
   --textGrey: #9c9aa7;
 }
 
@@ -91,7 +91,7 @@ code {
   font-weight: 600;
 }
 .nav-bar .nav .logo span {
-  color: red;
+  color: var(--newOrange);
 }
 .nav-bar .nav .menu {
   display: flex;
@@ -116,8 +116,8 @@ code {
   transition: all 0.3s ease-in-out;
 }
 .nav-bar .nav .menu ul a li {
-  font-weight: 520;
-  font-size: 1.7rem;
+  font-weight: 400;
+  font-size: 1.9rem;
 }
 .nav-bar .nav .menu ul a li:hover {
   color: var(--newOrange);
@@ -131,12 +131,20 @@ code {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width: 1278px) {
+  .nav-bar {
+    padding: 0 3rem;
+  }
+}
 @media only screen and (max-width: 1024px) {
+  .nav-bar {
+    padding: 0rem;
+  }
   .nav-bar .nav .menu ul {
     margin-right: 2rem;
   }
   .nav-bar .nav .logo {
-    margin-left: 4rem;
+    margin-left: 2rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -290,16 +298,17 @@ code {
   }
 }
 :root {
-  --newOrange: #f75023;
+  --newOrange: #aa8b56;
   --textGrey: #9c9aa7;
   --TextFrontend: #1cbe59;
+  --portfolioHover: #f4a41a;
 }
 
 #home {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 #home .home__hello {
@@ -334,7 +343,7 @@ code {
   transition: all 0.2s ease-in-out;
 }
 #home .home__hello a button:hover {
-  background: orange;
+  background: var(--portfolioHover);
   transform: translate(0, -10px);
 }
 #home .home__hello a button span {
@@ -363,9 +372,28 @@ code {
   }
 }
 @media only screen and (max-width: 768px) {
+  #home {
+    width: 100%;
+    flex-direction: column-reverse;
+    position: relative;
+    top: -4rem;
+  }
+  #home .home__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #home .home__image .image {
+    margin-bottom: 2rem;
+  }
   #home .home__hello {
-    margin-left: 8rem;
-    margin-top: 8rem;
+    width: 100%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #home .home__hello h3 {
     font-size: 2rem;
@@ -380,7 +408,7 @@ code {
     padding: 2rem;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 678px) {
   #home {
     width: 100%;
     flex-direction: column-reverse;
@@ -388,7 +416,44 @@ code {
   }
   #home .home__image {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+  #home .home__image .image {
+    margin-bottom: 2rem;
+  }
+  #home .home__hello {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  #home .home__hello h3 {
+    text-align: center;
+  }
+  #home .home__hello h1 {
+    text-align: center;
+  }
+  #home .home__hello .greenText {
+    text-align: center;
+  }
+  #home .home__hello p {
+    text-align: center;
+  }
+  #home .home__hello a {
+    display: grid;
+    place-items: center;
+  }
+}
+@media only screen and (max-width: 426px) {
+  #home {
+    width: 100%;
+    flex-direction: column-reverse;
+    position: relative;
+    margin-left: 0;
+    top: 4rem;
+  }
+  #home .home__image {
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 85%;
   }
@@ -398,6 +463,7 @@ code {
   #home .home__hello {
     margin-top: 2rem;
     width: 100%;
+    padding: 0 3rem;
   }
   #home .home__hello h3 {
     text-align: center;
@@ -451,7 +517,7 @@ code {
   }
 }
 :root {
-  --newOrange: #f75023;
+  --newOrange: #aa8b56;
   --textGrey: #9c9aa7;
 }
 
@@ -510,7 +576,7 @@ code {
 }
 @media only screen and (max-width: 425px) {
   #skills {
-    padding-left: 7rem;
+    padding: 14rem 3rem;
   }
   #skills .skill-group {
     grid-template-columns: repeat(1, 1fr);
@@ -519,7 +585,7 @@ code {
   }
 }
 :root {
-  --newOrange: #f75023;
+  --newOrange: #395144;
   --textGrey: #9c9aa7;
 }
 
@@ -536,6 +602,7 @@ code {
 #about .about__image img {
   width: 100%;
   height: auto;
+  border-radius: 2.5rem;
 }
 #about .about__info {
   padding-left: 6rem;
@@ -595,6 +662,7 @@ code {
   #about .about__info {
     padding-right: 0;
     padding-top: 0rem;
+    padding-left: 0;
   }
   #about .about__info h1 {
     font-size: 3rem;
@@ -605,10 +673,34 @@ code {
   #about .about__info .about__info-btn-groups {
     justify-content: center;
   }
+  #about .about__image {
+    padding-left: 0;
+  }
 }
 @media only screen and (max-width: 425px) {
   #about .about__image {
+    width: 70%;
+  }
+  #about .about__info {
     width: 100%;
+  }
+  #about .about__info h3 {
+    font-size: 2.6rem;
+  }
+  #about .about__info h1 {
+    font-size: 3rem;
+  }
+  #about .about__info p {
+    text-align: center;
+    padding: 0 3rem;
+  }
+  #about .about__info .about__info-btn-groups .about--btn {
+    max-width: 5rem;
+  }
+}
+@media only screen and (max-width: 376px) {
+  #about .about__image {
+    width: 60%;
   }
   #about .about__info {
     width: 100%;
@@ -627,7 +719,7 @@ code {
   }
 }
 :root {
-  --newOrange: #f75023;
+  --newOrange: #aa8b56;
   --textGrey: #9c9aa7;
 }
 
@@ -682,8 +774,8 @@ code {
 #portfolio .portfolio-group .portfolio-box a .top-layer {
   width: 100%;
   height: 100%;
-  background: rgb(94, 255, 245);
-  background: linear-gradient(328deg, rgb(94, 158, 255) 0%, rgb(119, 30, 135) 100%, rgb(60, 38, 184) 100%, rgb(0, 0, 0) 100%);
+  background: rgb(223, 208, 71);
+  background: linear-gradient(307deg, rgb(223, 208, 71) 0%, rgb(170, 139, 86) 100%);
   border-radius: 2.5rem;
   position: absolute;
   top: 0;
@@ -708,6 +800,7 @@ code {
   max-width: 100%;
   transform: translate3d(0, 100px, 0);
   opacity: 0;
+  font-size: 3rem;
   transition: all 0.3s ease-in-out 0.2s;
 }
 
@@ -720,7 +813,7 @@ code {
 }
 @media only screen and (max-width: 425px) {
   #portfolio {
-    padding-left: 5rem;
+    padding-left: 0;
   }
   #portfolio h1 {
     font-size: 3rem;
@@ -728,6 +821,9 @@ code {
   #portfolio .portfolio-group {
     grid-template-columns: repeat(1, 1fr);
     padding: 0;
+  }
+  #portfolio .portfolio-group .portfolio-box {
+    padding: 0 3rem;
   }
 }
 :root {
@@ -773,4 +869,15 @@ code {
   max-width: 1170px;
   margin: 0 auto;
   height: 100%;
+}
+
+@media only screen and (max-width: 1278px) {
+  .container {
+    padding: 0 3.7rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
