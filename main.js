@@ -1,3 +1,10 @@
+// Hide hastag when click each section
+window.addEventListener(
+  "hashchange",
+  () => window.history.pushState({}, "", "/"),
+  {}
+);
+
 const openNav = () => {
   let hamburger = document.querySelector(".hamburger");
   let navBar1 = document.querySelector(".nav-bar");
