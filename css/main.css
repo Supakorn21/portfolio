@@ -661,7 +661,6 @@ code {
 }
 #skills .skill-group .skill-box {
   width: 100%;
-  height: 15rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -671,8 +670,8 @@ code {
   border: 1px solid grey;
 }
 #skills .skill-group .skill-box .skill-logo {
-  max-width: 7rem;
-  max-height: 7rem;
+  max-width: 7rem !important;
+  max-height: 7rem !important;
 }
 #skills .skill-group .skill-box .skill-logo img {
   width: 100%;
@@ -855,27 +854,69 @@ code {
   text-align: center;
   font-size: 5rem;
   font-weight: 400;
-  margin-bottom: 5rem;
+  margin-bottom: 12rem;
 }
 #portfolio .portfolio-group {
   width: 100%;
   place-items: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12rem;
 }
 #portfolio .portfolio-group .portfolio-box {
   width: 100%;
   height: 100%;
-  transition: transform 0.2s ease-in-out;
+  display: flex;
 }
-#portfolio .portfolio-group .portfolio-box:hover {
-  transform: scale(1.08);
+#portfolio .portfolio-group .portfolio-box .info-box {
+  padding: 1rem;
+  width: 50%;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .technologies {
+  margin-top: 1rem;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .demo-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .demo-box .demo-info-box {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .demo-box .demo-info-box .fa-solid {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .demo-box .demo-info-box h3 {
+  color: black;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .demo-box .demo-info-box h3:hover {
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .demo-box .demo-info-box:hover {
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .github-project {
+  width: 14%;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  height: 9rem;
+}
+#portfolio .portfolio-group .portfolio-box .info-box .github-project:hover {
+  transform: translate3d(0, -3%, 0);
+  transition: all 0.3s ease-in-out;
 }
 #portfolio .portfolio-group .portfolio-box a {
-  display: flex;
+  display: block;
   height: 100%;
   position: relative;
+  width: 50%;
 }
 #portfolio .portfolio-group .portfolio-box a img {
   width: 100%;
@@ -923,8 +964,29 @@ code {
 @media only screen and (max-width: 1024px) {
   #portfolio .portfolio-group {
     gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
     padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #portfolio {
+    padding-left: 0;
+  }
+  #portfolio h1 {
+    font-size: 3rem;
+  }
+  #portfolio .portfolio-group {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+    gap: 12rem;
+  }
+  #portfolio .portfolio-group .portfolio-box {
+    padding: 0 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  #portfolio .portfolio-group .portfolio-box .info-box .demo-box {
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 425px) {
