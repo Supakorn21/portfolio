@@ -162,10 +162,15 @@
         align-items: center;
 
         .info-box {
+          width: 100%;
+          margin-bottom: 1rem;
           .demo-box {
             flex-direction: column;
             align-items: center;
           }
+        }
+        a {
+          width: 100%;
         }
       }
     }

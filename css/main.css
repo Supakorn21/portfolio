@@ -984,9 +984,16 @@ code {
     flex-direction: column;
     align-items: center;
   }
+  #portfolio .portfolio-group .portfolio-box .info-box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
   #portfolio .portfolio-group .portfolio-box .info-box .demo-box {
     flex-direction: column;
     align-items: center;
+  }
+  #portfolio .portfolio-group .portfolio-box a {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 425px) {
