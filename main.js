@@ -1,7 +1,7 @@
 // Hide hastag when click each section
 window.addEventListener(
   "hashchange",
-  () => window.history.pushState({}, "", "/"),
+  () => window.history.pushState({}, "", "/portfolio/"),
   {}
 );
 
